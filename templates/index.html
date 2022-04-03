@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Diabetes Prediction</title>
+        <link rel="stylesheet" href="../static/styles/style.css">
+    </head>    
+    
+    <body>
+        <center>      
+
+           
+        <h1 style="font-size: 40px; color: rgb(201, 15, 15); text-align: center;">Diabetes Prediction</h1>
+        <h2 style="font-size:25px;">This web application is made to predict diabetes with the following parameters given</h2>
+        <p style="font-size: large; font-family:'Times New Roman';">Fill the form and get your results</p> <br>
+
+
+        <form method='POST', action="{{url_for('predict')}}">
+            
+            <label style="font-size: large; background-color: rgb(223, 245, 21); padding:5px 15px; margin: 10px 5px 15px 5px;" for="pregnancies">No. of Pregnancies:</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="pregnancies" placeholder="enter" step="any"> <br><br>
+            <label style="font-size: large; background-color: rgb(223, 245, 21); padding:5px 15px; margin: 10px 5px 15px 5px;" for="glucose">Glucose (mg/dL):</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="glucose" placeholder="enter" step="any"> <br><br>
+
+            <label style="font-size: large; background-color: rgb(223, 245, 21); padding:5px 15px; margin: 10px 5px 15px 5px;" for="bloodpressure">Blood Pressure (mmHg):</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="bloodpressure" placeholder="enter" step="any"> <br><br>
+
+            <label style="font-size: large; background-color: rgb(223, 245, 21); padding:5px 15px; margin: 10px 5px 15px 5px;" for="skinthickness">Skin Thickness (mm):</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="skinthickness" placeholder="enter" step="any"> <br><br>
+           
+            <label style="font-size: large; background-color: rgb(223, 245, 21); padding:5px 15px; margin: 10px 5px 15px 5px;" for="insulin">Insulin Level (IU/mL):</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="insulin" placeholder="enter" step="any"> <br><br>
+           
+            <label style="font-size: large; background-color: rgb(223, 245, 21); padding:5px 15px; margin: 10px 5px 15px 5px;" for="bmi">Body Mass Index (kg/m²):</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="bmi" placeholder="enter" step="any"> <br><br>
+           
+            <label style="font-size: large; background-color: rgb(223, 245, 21); padding:5px 15px; margin: 10px 5px 15px 5px;" for="dpf">Diabetes Pedigree Function:</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="dpf" placeholder="enter" step="any"> <br><br>
+           
+            
+            <label style="font-size: large; background-color: rgb(223, 245, 21); padding:5px 15px; margin: 10px 5px 15px 5px;" for="age">Age (years):</label>
+            <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="age" placeholder="enter" step="any"> <br><br>
+           
+
+            <input type="submit" , value= 'Predict' style="font-size: larger; padding: 5px 15px;margin-top: 15px;"> <br><br></br>
+            <input type="reset" , value='Reset' style="padding: 5px 15px;margin-top: 15px;">
+        </form>
+       
+    </center>
+
+</body>
+</html>
