@@ -8,12 +8,12 @@ model = joblib.load(open("models/model.pkl", 'rb'))
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/',methods=['GET'])
 def home():
 	return render_template('index.html')
 
-@app.route('/predict', methods=['POST'])
-def predict():
+@app.route('/prediction', methods=['POST'])
+def prediction():
     if request.method == 'POST':
         preg = int(request.form['pregnancies'])
         glucose = int(request.form['glucose'])
@@ -25,9 +25,9 @@ def predict():
         age = int(request.form['age'])
         
         arr = np.array([[preg, glucose, bp, st, insulin, bmi, dpf, age]])
-        my_prediction = model.predict(arr)
+        prediction = model.predict(arr)
         
-    return render_template('result.html', prediction=my_prediction)
+    return render_template('result.html', data=prediction)
 
-if __name__ == '__main__':
-	app.run(debug=False)
+if __name__ == "__main__":
+	app.run()

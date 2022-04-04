@@ -3,7 +3,6 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Diabetes Prediction</title>
-        <link rel="stylesheet" href="../static/styles/style.css">
     </head>    
     
     <body>
@@ -15,7 +14,7 @@
         <p style="font-size: large; font-family:'Times New Roman';">Fill the form and get your results</p> <br>
 
 
-        <form method='POST', action="{{url_for('predict')}}">
+        <form method='POST', action="{{url_for('prediction')}}">
             
             <label style="font-size: large; background-color: rgb(223, 245, 21); padding:5px 15px; margin: 10px 5px 15px 5px;" for="pregnancies">No. of Pregnancies:</label>
             <input style="font-size: 15; padding:5px 15px; margin:5px;" type="number" name="pregnancies" placeholder="enter" step="any"> <br><br>
