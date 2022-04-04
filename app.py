@@ -15,14 +15,14 @@ def home():
 @app.route('/prediction', methods=['POST'])
 def prediction():
     if request.method == 'POST':
-        preg = int(request.form['pregnancies'])
-        glucose = int(request.form['glucose'])
-        bp = int(request.form['bloodpressure'])
-        st = int(request.form['skinthickness'])
-        insulin = int(request.form['insulin'])
-        bmi = float(request.form['bmi'])
-        dpf = float(request.form['dpf'])
-        age = int(request.form['age'])
+        preg = (request.form['pregnancies'])
+        glucose = (request.form['glucose'])
+        bp = (request.form['bloodpressure'])
+        st = (request.form['skinthickness'])
+        insulin = (request.form['insulin'])
+        bmi = (request.form['bmi'])
+        dpf = (request.form['dpf'])
+        age = (request.form['age'])
         
         arr = np.array([[preg, glucose, bp, st, insulin, bmi, dpf, age]])
         prediction = model.predict(arr)

@@ -1,0 +1,26 @@
+body
+{
+    background-color: white;
+  }
+
+@media screen  and (max-width:1142px){
+
+    input{
+        display: block;
+    }
+    label{
+        display: block;
+        margin: auto;
+        padding-top: 15px;
+    }
+}
+
+@media screen  and (max-width:936px){
+   
+    input{
+        display: block;
+    }
+    .sec1 > select{
+        display: block;
+    }
+}
